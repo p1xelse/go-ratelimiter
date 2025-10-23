@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  redis:
+    image: redis:latest # Specifies the official Redis Docker image
+    ports:
+      - "6379:6379" # Maps port 6379 on the host to port 6379 in the container
+    volumes:
+      - redis_data:/data # Mounts a named volume for data persistence
+
+volumes:
+  redis_data: # Defines the named volume
